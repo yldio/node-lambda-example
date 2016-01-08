@@ -1,0 +1,15 @@
+{
+  "name": "example-lambda-function",
+  "version": "1.0.0",
+  "description": "An example Lambda function that's uploaded as a ZIP",
+  "main": "index.js",
+  "dependencies": {
+    "jsonwebtoken": "^5.5.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
