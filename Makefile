@@ -1,12 +1,12 @@
 role_name = lambda_basic_execution
 
-upload: role-arn function-arn function.zip
+upload: function-arn function.zip
 	@aws lambda update-function-code \
 		--function-name "$(shell cat function-arn)" \
 		--publish \
 		--zip-file fileb://function.zip
 
-create-function:
+create-function: role-arn function.zip
 	aws lambda create-function \
 		--function-name "$(shell json name < package.json)" \
 		--description "$(shell json description < package.json)" \
